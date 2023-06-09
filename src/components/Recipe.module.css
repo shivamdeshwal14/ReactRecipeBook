@@ -8,6 +8,8 @@
     background-color: white;
     align-items: center;
     min-width: 40%;
+    min-height: 40%;
+    max-width: 40%;
 }
 .image{
     border-radius: 50%;

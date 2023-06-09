@@ -1,6 +1,6 @@
 import{useState,useEffect} from "react"
 import './App.css';
-import Recipe from "./Recipe";
+import Recipe from "./components/Recipe";
 const App=()=>{
   const APP_ID='e8a6f00f'
   const APP_KEY='9f6ec7fa6e2c14a728a2bfd5de4d3964	'
@@ -22,7 +22,7 @@ const submitHandler=e=>{
   setSearch('')
 }
 return<div className="App">
-<form onSubmit={submitHandler}  >
+<form  className="search-form" onSubmit={submitHandler}  >
 <input type="text"onChange={e=>setSearch(e.target.value )}className="search-bar"/>
 <button type="submit" className="search-button">Search</button>
 {dishes.map((item,idx)=><Recipe recipelist={item} key={idx}/>)}
