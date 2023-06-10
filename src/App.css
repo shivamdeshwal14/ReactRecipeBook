@@ -6,7 +6,7 @@
   .search-form {
     min-height: 10vh;
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    /* flex-direction: column; Align items vertically */
     justify-content: center;
     align-items: center;
     min-width: 100%;
@@ -16,7 +16,8 @@
     margin-top: 2px;
     width:40%;
     border:none;
-    padding:10px
+    padding:10px;
+    border-radius:10%
   }
   
   .search-button{

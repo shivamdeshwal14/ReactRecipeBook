@@ -1,9 +1,12 @@
 import Styles from "./Recipe.module.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Image } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 const Recipe=(props)=>{
     
-return <div className={Styles.recipe}>  
-<h1>{props.recipelist.recipe.label}</h1>
-    <img src={props.recipelist.recipe.image} className={Styles.image}/>
+return <div className={Styles.recipe} >  
+    <h1>{props.recipelist.recipe.label}</h1>
+    <Image src={props.recipelist.recipe.image} alt="Image"  className="rounded-circle" fluid  />
     <h3>Ingredients</h3>
     <ol>
         {props.recipelist.recipe.ingredients.map(ingredient => (
@@ -15,8 +18,7 @@ return <div className={Styles.recipe}>
     <ul>
     <li> Dish Type-{props.recipelist.recipe.dishType}</li>
     <li>Calories-{props.recipelist.recipe.calories}</li>
-    </ul>
-  
+    </ul> 
 </div>
 }
 export default Recipe

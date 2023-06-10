@@ -1,6 +1,10 @@
 import{useState,useEffect} from "react"
 import './App.css';
 import Recipe from "./components/Recipe";
+import { Button } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const App=()=>{
   const APP_ID='e8a6f00f'
   const APP_KEY='9f6ec7fa6e2c14a728a2bfd5de4d3964	'
@@ -22,11 +26,17 @@ const submitHandler=e=>{
   setSearch('')
 }
 return<div className="App">
-<form  className="search-form" onSubmit={submitHandler}  >
-<input type="text"onChange={e=>setSearch(e.target.value )}className="search-bar"/>
-<button type="submit" className="search-button">Search</button>
-{dishes.map((item,idx)=><Recipe recipelist={item} key={idx}/>)}
-</form>
+  <form  className="search-form" onSubmit={submitHandler}  >
+    <input type="text"onChange={e=>setSearch(e.target.value )}
+     size="lg" className="mb-10"
+    />  
+    <Button type="submit"variant="success" size="sm">Search</Button>{' '}
+   </form>
+  <div className="recipes">
+  {dishes.map((item,idx)=><Recipe recipelist={item} key={idx}/>)}
+  </div>
+
+
 </div>
 }
 export default App;
