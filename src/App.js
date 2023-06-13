@@ -36,7 +36,6 @@ return<div className="App">
   {dishes.map((item,idx)=><Recipe recipelist={item} key={idx}/>)}
   </div>
 
-
 </div>
 }
 export default App;
