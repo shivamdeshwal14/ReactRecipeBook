@@ -1,7 +1,7 @@
 import Styles from "./Recipe.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Image } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
+
 const Recipe=(props)=>{
     
 return <div className={Styles.recipe} >  
