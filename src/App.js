@@ -28,8 +28,7 @@ const submitHandler=e=>{
 return<div className="App">
   <form  className="search-form" onSubmit={submitHandler}  >
     <input type="text"onChange={e=>setSearch(e.target.value )}
-     size="lg" className="mb-10"
-    />  
+     size="lg" className="mb-10"    />  
     <Button type="submit"variant="success" size="sm">Search</Button>{' '}
    </form>
   <div className="recipes">
